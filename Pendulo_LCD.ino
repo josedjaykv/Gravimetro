@@ -14,7 +14,7 @@ LiquidCrystal lcd(0, 1, 2, 3, 4, 5);
 float gravedad = 0;
 const int fotoresistorPin2 = A1;
 const int ledPin2 = 13; 
-float L = 1.91;
+float L = 0.09;
 unsigned long tiempoInicio = 0;
 unsigned long tiempoDuracion = 0;
 int contador = -1;
@@ -71,11 +71,11 @@ void loop() {
       if (tiempoInicio == 0) {
         tiempoInicio = millis();
       }
-    } else if (contador == 4) {
+    } else if (contador == 20) {
       if (tiempoInicio > 0) {
         tiempoDuracion = millis() - tiempoInicio;
         float tiempoSegundos = tiempoDuracion / 1000.0;
-        float T = tiempoSegundos / 2;
+        float T = tiempoSegundos / 10;        
 
         gravedad = (4 * PI * PI * L) / (T * T);
         mostrarGravedad = true;
