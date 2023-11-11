@@ -2,6 +2,7 @@
 # Gravimetro
 Por Jose David Jayk Vanegas, Camilo Valencia, Samuel Corrales y Diego Collazos
 
+## Caida Libre
 
 ### Configuraion de pines y objetos
 ```c++
